@@ -11,8 +11,6 @@ branch to work on new features or fixes without directly interfering with the ma
 and remote branch that your local branch should be pushed to and pulled from for updates.
 -m (move): This parameter is used to rename a branch locally. You can use -m followed by the current branch name and the
 new name to rename it.
-
-
 A "fork" on GitHub refers to the action of creating a copy of a user's repository into your own GitHub space. When you fork
 a repository, you essentially duplicate the original repository into your own GitHub account.
 This allows you to work independently on your own fork without affecting the original repository.
