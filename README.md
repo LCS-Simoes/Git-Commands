@@ -24,8 +24,7 @@ This allows you to work independently on your own fork without affecting the ori
 ````
   echo "#Repositoryname" ~~>  README.md
   git init
-  git add README.md ~~> 
-  It's not mandatory, But it's good
+  git add README.md ~~> It's not mandatory, But it's good
   git commit -m "first commit"
   git branch -M main 
   git remote add origin https://github.com/linktoyourrepository.git
