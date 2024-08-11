@@ -16,6 +16,7 @@
 
   Observation:
   When you do a git push with the -u option, you are telling Git to associate the local branch with the remote branch you are pushing.
-  This makes it easier to use commands like git pull and git push in the future, as Git already knows which remote branch to associate with the local branch.
+  This makes it easier to use commands like git pull and git push in the future, as Git already knows which remote branch
+  to associate with the local branch.
 ````
 
