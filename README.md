@@ -16,9 +16,6 @@ a repository, you essentially duplicate the original repository into your own Gi
 This allows you to work independently on your own fork without affecting the original repository.
 
 ````
-
-
-
 # Starting versioning in a repository
 
 ````
@@ -30,4 +27,19 @@ This allows you to work independently on your own fork without affecting the ori
   git remote add origin https://github.com/linktoyourrepository.git
   git push -u origin main
 ````
+
+# Common commands
+
+````
+  git add [file] ~~> Adds a file to the index (staging area) for the next commit
+  git commit -m "message" ~~> Commits the changes added to the index, with a message
+  git status ~~> Shows the current state of the repository
+  git diff ~~>  Shows differences between modified files and the last commit.
+  git pull ~~> Pulls (downloads and merges) changes from the remote repository to the current branch
+  git push origin ~~> Pushes commits from the local repository to the remote repository named "origin
+  git fetch ~~>  Retrieves updates from a remote repository without merging them.
+  git checkout -- . ~~> Discards changes in the working directory and restores files to their last committed state.
+````
+# Advanced commands
+
 
