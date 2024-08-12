@@ -76,17 +76,17 @@ This allows you to work independently on your own fork without affecting the ori
 # Differences between Git, GitHub and Git Bash 😵
 ````
 Git
-What it is: Distributed version control system.
-Main Function: Manage and version code locally.
-Example Commands: git init, git commit, git push.
+What it is: Distributed version control system
+Main Function: Manage and version code locally
+Example Commands: git init, git commit, git push
 
 GitHub
-What it is: Online platform that hosts Git repositories.
-Main Function: Facilitate collaboration and project management with Git on the web.
-Features: Online repositories, pull requests, and CI/CD integration.
+What it is: Online platform that hosts Git repositories
+Main Function: Facilitate collaboration and project management with Git on the web
+Features: Online repositories, pull requests, and CI/CD integration
 
 GitBah
-What it is: Terminal for Windows with Unix and Git command support.
-Main Function: Execute Git and Unix commands on Windows.
-Features: Command-line interface for Git and Unix-like commands.
+What it is: Terminal for Windows with Unix and Git command support
+Main Function: Execute Git and Unix commands on Windows
+Features: Command-line interface for Git and Unix-like commands
 ````
