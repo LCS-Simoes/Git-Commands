@@ -85,7 +85,7 @@ What it is: Online platform that hosts Git repositories
 Main Function: Facilitate collaboration and project management with Git on the web
 Features: Online repositories, pull requests, and CI/CD integration
 
-GitBah
+GitBash
 What it is: Terminal for Windows with Unix and Git command support
 Main Function: Execute Git and Unix commands on Windows
 Features: Command-line interface for Git and Unix-like commands
