@@ -68,7 +68,7 @@ This allows you to work independently on your own fork without affecting the ori
   git revert [commit-hash] ⮕ Creates a new commit that undoes the changes made by a previous commit
 ````
 
-#SSH
+# SSH
 ````
   https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 ````
