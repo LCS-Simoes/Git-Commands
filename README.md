@@ -1,92 +1,100 @@
+# Guia de Git e GitHub
+
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="100" height="100" />
 </p>
 
-# Observations
+## 📌 Observações
 
-````
-Branch: In Git, a "branch" is an independent line of development. You can create new branches from an existing
-branch to work on new features or fixes without directly interfering with the main branch (typically called master or main).
--u (upstream): This parameter is used to set the "upstream" of a branch. The upstream is the remote repository
-and remote branch that your local branch should be pushed to and pulled from for updates.
--m (move): This parameter is used to rename a branch locally. You can use -m followed by the current branch name and the
-new name to rename it.
-A "fork" on GitHub refers to the action of creating a copy of a user's repository into your own GitHub space. When you fork
-a repository, you essentially duplicate the original repository into your own GitHub account.
-This allows you to work independently on your own fork without affecting the original repository.
+**Branch (ramo)**: No Git, um "ramo" é uma linha de desenvolvimento independente. Você pode criar novos ramos a partir de um ramo existente para trabalhar em novas funcionalidades ou correções sem interferir diretamente no ramo principal (geralmente chamado de `master` ou `main`).
 
-````
-# Starting versioning in a repository
+**-u (upstream)**: Este parâmetro é usado para configurar o "upstream" de um ramo. O upstream é o repositório remoto e o ramo remoto ao qual seu ramo local será enviado (`push`) e do qual receberá atualizações (`pull`).
 
-````
-  echo "#Repositoryname" ⮕ README.md
+**-m (move)**: Este parâmetro é usado para renomear um ramo localmente. Você pode usar `-m` seguido pelo nome atual do ramo e pelo novo nome para renomeá-lo.
+
+**Fork**: Um "fork" no GitHub se refere à ação de criar uma cópia do repositório de um usuário em seu próprio espaço no GitHub. Isso permite que você trabalhe independentemente sem afetar o repositório original.
+
+---
+
+## 🚀 Iniciando o versionamento em um repositório
+
+```bash
+  echo "#NomeDoRepositorio" > README.md
   git init
-  git add README.md ⮕ It's not mandatory, But it's good
-  git commit -m "first commit"
-  git branch -M main 
-  git remote add origin https://github.com/linktoyourrepository.git
+  git add README.md  # Não é obrigatório, mas é recomendado
+  git commit -m "Primeiro commit"
+  git branch -M main
+  git remote add origin https://github.com/linkparaseurepositorio.git
   git push -u origin main
-````
+```
 
-# Common commands
+---
 
-````
-  git add [file] ⮕ Adds a file to the index (staging area) for the next commit
-  git commit -m "message" ⮕ Commits the changes added to the index, with a message
-  git status ⮕ Shows the current state of the repository
-  git diff ⮕ Shows differences between modified files and the last commit.
-  git pull ⮕ Pulls (downloads and merges) changes from the remote repository to the current branch
-  git push origin ⮕ Pushes commits from the local repository to the remote repository named
-  git fetch ⮕  Retrieves updates from a remote repository without merging them
-  git checkout -- . ⮕  Discards changes in the working directory and restores files to their last committed state
-````
+## 🔥 Comandos comuns
 
-# Git Branch
+```bash
+  git add [arquivo]  # Adiciona um arquivo ao índice (staging area) para o próximo commit
+  git commit -m "mensagem"  # Salva as mudanças adicionadas ao índice, com uma mensagem
+  git status  # Mostra o estado atual do repositório
+  git diff  # Exibe diferenças entre arquivos modificados e o último commit
+  git pull  # Baixa e mescla mudanças do repositório remoto para o ramo atual
+  git push origin [ramo]  # Envia commits do repositório local para o repositório remoto
+  git fetch  # Baixa atualizações de um repositório remoto sem mesclá-las
+  git checkout -- .  # Descarta as mudanças locais e restaura os arquivos para o último commit
+```
 
-````
-  git branch -a ⮕ Lists all branches, both local and remote
-  git branch -b [branch-name]  ⮕ creates a new branch named
-  git branch -d [branch-name]  ⮕Deletes a local branch (use with caution)
-  git branch -m [branch-name] [newBranchName] ⮕ Renames the current branch (use with the new branch name)
-  git branch -m [newBranchName]
-  git branch -M  ⮕ Force renames a branch, even if the new name already exists
-  git checkout [branch-name] ⮕ Switches to a different branch or restores files
-  git checkout -b [branch-name] ⮕ Creates and switches to a new branch named 
-  git merge [branch-name] ⮕ Merges changes from another branch into the current branch
-  git push origin Pushes [branch-name] ⮕ commits from the local branch to the remote repository named "origin
-```` 
+---
 
-# Advanced commands
+## 🌿 Git Branch (Ramos)
 
-````
-  git rebase [branch-name] ⮕ Reapplies commits from one branch onto another.
-  git cherry-pick [commit hash] ⮕ Applies changes from a specific commit onto the current branch.
-  git diff -stagged  ⮕ Shows differences between the last commit and what is staged for the next commit
-  git reflog   ⮕ Displays the history of HEAD references, useful for recovering lost commits
-  git stash ⮕  Temporarily stores changes so you can work on something else
-  git stash pop ⮕  Restores changes that were saved with git stash
-  git revert [commit-hash] ⮕ Creates a new commit that undoes the changes made by a previous commit
-````
+```bash
+  git branch -a  # Lista todos os ramos, tanto locais quanto remotos
+  git branch [nome-do-ramo]  # Cria um novo ramo
+  git branch -d [nome-do-ramo]  # Deleta um ramo local (use com cuidado)
+  git branch -m [nome-do-ramo] [novo-nome]  # Renomeia um ramo
+  git checkout [nome-do-ramo]  # Troca para um ramo diferente
+  git checkout -b [nome-do-ramo]  # Cria e troca para um novo ramo
+  git merge [nome-do-ramo]  # Mescla mudanças de outro ramo para o ramo atual
+  git push origin [nome-do-ramo]  # Envia commits do ramo local para o repositório remoto
+```
 
-# SSH
-````
-  https://docs.github.com/en/authentication/connecting-to-github-with-ssh
-````
+---
 
-# Differences between Git, GitHub and Git Bash 😵
-````
-Git
-What it is: Distributed version control system
-Main Function: Manage and version code locally
-Example Commands: git init, git commit, git push
+## ⚡ Comandos avançados
 
-GitHub
-What it is: Online platform that hosts Git repositories
-Main Function: Facilitate collaboration and project management with Git on the web
-Features: Online repositories, pull requests, and CI/CD integration
+```bash
+  git rebase [nome-do-ramo]  # Reaplica commits de um ramo para outro
+  git cherry-pick [hash-do-commit]  # Aplica mudanças de um commit específico para o ramo atual
+  git diff --staged  # Mostra diferenças entre o último commit e o que está preparado para o próximo commit
+  git reflog  # Exibe o histórico das referências HEAD, útil para recuperar commits perdidos
+  git stash  # Armazena temporariamente mudanças para que você possa trabalhar em outra coisa
+  git stash pop  # Restaura mudanças que foram salvas com `git stash`
+  git revert [hash-do-commit]  # Cria um novo commit que desfaz as mudanças feitas por um commit anterior
+```
 
-GitBash
-What it is: Terminal for Windows with Unix and Git command support
-Main Function: Execute Git and Unix commands on Windows
-Features: Command-line interface for Git and Unix-like commands
-````
+---
+
+## 🔐 Conectando com SSH
+
+Para configurar o GitHub com SSH, acesse:
+
+🔗 [Documentação Oficial](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh)
+
+---
+
+## 🤔 Diferenças entre Git, GitHub e Git Bash 😵
+
+| Ferramenta  | O que é | Função Principal |
+|------------|----------|----------------|
+| **Git** | Sistema de controle de versão distribuído | Gerenciar e versionar código localmente |
+| **GitHub** | Plataforma online que hospeda repositórios Git | Facilitar a colaboração e gerenciamento de projetos com Git na web |
+| **Git Bash** | Terminal para Windows com suporte a comandos Unix e Git | Executar comandos Git e Unix no Windows |
+
+---
+
+## 📜 Licença
+
+Este material é de uso livre e pode ser compartilhado e modificado conforme necessário. 😊
+
+---
+
